@@ -1,0 +1,18 @@
+<div class="card" *ngIf="product">
+  <a [routerLink]="['/products', product.id]">
+    <img src="{{ product.url }}" alt="{{ product.name }}" style="width: 100%" />
+    <h1>{{ product.name }}</h1>
+    <p class="price">${{ product.price }}</p>
+  </a>
+
+  <p>
+    {{ counter }}
+  </p>
+  <div class="counter">
+    <button type="button" class="counter" (click)="increment()">+</button>
+    <button type="button" class="counter" (click)="decrement()">-</button>
+  </div>
+  <p>
+    <button (click)="handleAddToCartClick(product)">Add to Cart</button>
+  </p>
+</div>

@@ -1,0 +1,111 @@
+<div class="cart-container">
+  <div class="cart-panel" *ngIf="this.cart">
+    <div class="card" *ngFor="let product of this.cart.products">
+      <app-cart-item [product]="product"></app-cart-item>
+    </div>
+    <div *ngIf="this.cart && this.cart.products.length > 0">
+      <h3>Total: ${{ total }}</h3>
+    </div>
+    <div
+      class="empty-cart-message"
+      *ngIf="this.cart && this.cart.products.length === 0"
+    >
+      Cart is empty!
+    </div>
+  </div>
+
+  <div class="cart-panel">
+    <form
+      name="form"
+      (ngSubmit)="cartForm.form.valid && onSubmit()"
+      #cartForm="ngForm"
+      [creditCardNumberValidator]="['creditCardNumber']"
+      novalidate
+    >
+      <div class="form-group">
+        <label>Full name</label>
+        <input
+          type="text"
+          name="fullName"
+          class="form-control"
+          [(ngModel)]="model.fullName"
+          #fullName="ngModel"
+          [ngClass]="{ 'is-invalid': cartForm.submitted && fullName.invalid }"
+          required
+          minlength="3"
+        />
+        <div
+          *ngIf="cartForm.submitted && fullName.invalid"
+          class="invalid-feedback"
+        >
+          <div *ngIf="fullName.errors?.['required']">
+            Full name is required.
+          </div>
+          <div *ngIf="fullName.errors?.['minlength']">
+            The full name must contain at least 3 characters.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Address</label>
+        <input
+          type="text"
+          name="address"
+          class="form-control"
+          [(ngModel)]="model.address"
+          #address="ngModel"
+          [ngClass]="{ 'is-invalid': cartForm.submitted && address.invalid }"
+          required
+          minlength="6"
+        />
+        <div
+          *ngIf="cartForm.submitted && address.invalid"
+          class="invalid-feedback"
+        >
+          <div *ngIf="address.errors?.['required']">Address is required.</div>
+          <div *ngIf="address.errors?.['minlength']">
+            The address must contain at least 6 characters.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Credit Card Number</label>
+        <input
+          type="text"
+          name="creditCardNumber"
+          class="form-control"
+          [(ngModel)]="model.creditCardNumber"
+          #creditCardNumber="ngModel"
+          [ngClass]="{
+            'is-invalid': cartForm.submitted && creditCardNumber.invalid
+          }"
+          required
+          minlength="16"
+          maxlength="16"
+        />
+        <div
+          *ngIf="cartForm.submitted && creditCardNumber.invalid"
+          class="invalid-feedback"
+        >
+          <div *ngIf="creditCardNumber.errors?.['required']">
+            Credit Card Number is required.
+          </div>
+          <div *ngIf="creditCardNumber.errors?.['minlength']">
+            The Credit Card Number must contain 16 characters.
+          </div>
+          <div *ngIf="creditCardNumber.errors?.['creditCardNumberValidator']">
+            The Credit Card Number is not valid.
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <p>We'll never share your payment details with anyone else.</p>
+
+        <button type="submit" class="btn btn-primary mr-1">Register</button>
+      </div>
+    </form>
+  </div>
+</div>

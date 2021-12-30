@@ -1,0 +1,17 @@
+<div class="confirmation-container">
+  <div class="confirmation-items">
+    <div class="confirmation-header">
+      <h1>Success!</h1>
+    </div>
+    <div class="confirmation-item">Thank you, {{ fullName }}!</div>
+    <div class="confirmation-item">Your ${{ total }} order is confirmed!</div>
+    <div class="confirmation-item">
+      Please allow 1-3 business day(s) for shipping.
+    </div>
+    <div class="confirmation-item">
+      <button type="button" (click)="handleBackToProductListClick()">
+        Back to product list
+      </button>
+    </div>
+  </div>
+</div>

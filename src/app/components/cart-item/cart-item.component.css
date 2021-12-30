@@ -1,0 +1,18 @@
+img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.cart-item-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 80px;
+}
