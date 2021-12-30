@@ -2,7 +2,7 @@
 
 > "MyStore" is a Angular web app that showcases a full single-page ecommerce application.
 
-![](https://en.wikipedia.org/wiki/Angular_(web_framework)#/media/File:Angular_full_color_logo.svg)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/240px-Angular_full_color_logo.svg.png)
 
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
