@@ -19,6 +19,7 @@ export class ProductItemComponent implements OnInit {
   }
 
   public handleAddToCartClick(product: IProduct): void {
+    alert('Cart has been updated!');
     this.addToCartClick.emit({ ...product, quantity: this.counter });
   }
 
