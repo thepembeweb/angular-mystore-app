@@ -1,27 +1,42 @@
-# AngularMystoreApp
+﻿# My Store App
 
+> "MyStore" is a Angular web app that showcases a full single-page ecommerce application.
+
+![](https://en.wikipedia.org/wiki/Angular_(web_framework)#/media/File:Angular_full_color_logo.svg)
+
+![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+
+The application contains a variety of different Angular components that communicate with each other, such as this product list component that renders a list of items that the user can shop for. The app showcases a full single-page ecommerce application.
+
+## Installation
+
+### Requirements
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
-## Development server
+If you do not have Node >= 6.x installed, you can download it here: [Node.js](https://nodejs.org/en/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Setup
 
-## Code scaffolding
+* Clone the repo `git clone https://github.com/thepembeweb/angular-mystore-app.git`
+* Install project dependencies with `npm install`
+* Start the development server with `ng serve`
+* Open the browser at `localhost:4200`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Built With
 
-## Build
+* [Angular](https://angular.io/) - The web framework used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Authors
 
-## Running unit tests
+* **[Pemberai Sweto](https://github.com/thepembeweb)** - *Initial work* - [Would you rather](https://github.com/thepembeweb/angular-mystore-app)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## License
 
-## Running end-to-end tests
+[![License](http://img.shields.io/:license-mit-green.svg?style=flat-square)](http://badges.mit-license.org)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+- Copyright 2021 © [Pemberai Sweto](https://github.com/thepembeweb).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
