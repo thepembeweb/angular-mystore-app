@@ -6,7 +6,13 @@
 
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
-The application contains a variety of different Angular components that communicate with each other, such as this product list component that renders a list of items that the user can shop for. The app showcases a full single-page ecommerce application.
+The application contains a variety of different Angular components that communicate with each other, such as this product list component that renders a list of items that the user can shop for.
+
+This application demonstrates a full single-page ecommerce application with Angular called MyStore. It consists of the following pages:
+- `homepage` - displays list of products
+- `details` - displays product details
+- `cart` - displays cart details i.e customer details and the selected products 
+- `confirmation` - displays the confirmed order details
 
 ## Installation
 
