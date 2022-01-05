@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IProduct } from 'src/app/models/product.model';
 
 @Component({
@@ -8,7 +8,7 @@ import { IProduct } from 'src/app/models/product.model';
 })
 export class CartItemComponent implements OnInit {
   @Input() public product: IProduct | undefined;
-  // @Output() addToCartClick = new EventEmitter();
+  @Output() removeFromCartClick = new EventEmitter();
 
   counter = 0;
 
@@ -26,5 +26,10 @@ export class CartItemComponent implements OnInit {
     } else {
       this.counter = 0;
     }
+  }
+
+  public handleRemoveFromCartClick(product: IProduct): void {
+    alert('Cart has been updated!');
+    this.removeFromCartClick.emit({ ...product, quantity: 0 });
   }
 }

@@ -2,6 +2,7 @@
   <a [routerLink]="['/products', product.id]">
     <img src="{{ product.url }}" alt="{{ product.name }}" style="width: 100%" />
     <h1>{{ product.name }}</h1>
+    <p>{{ product.description }}</p>
     <p class="price">${{ product.price }}</p>
   </a>
 

@@ -12,5 +12,8 @@
     <div class="cart-item-quantity">
       <p>Amount: {{ product.quantity }}</p>
     </div>
+    <button class="button" (click)="handleRemoveFromCartClick(product)">
+      Remove
+    </button>
   </div>
 </div>

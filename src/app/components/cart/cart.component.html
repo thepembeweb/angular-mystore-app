@@ -1,7 +1,10 @@
 <div class="cart-container">
   <div class="cart-panel" *ngIf="this.cart">
     <div class="card" *ngFor="let product of this.cart.products">
-      <app-cart-item [product]="product"></app-cart-item>
+      <app-cart-item
+        [product]="product"
+        (removeFromCartClick)="onRemoveFromCart($event)"
+      ></app-cart-item>
     </div>
     <div *ngIf="this.cart && this.cart.products.length > 0">
       <h3>Total: ${{ total }}</h3>
@@ -28,7 +31,8 @@
           type="text"
           name="fullName"
           class="form-control"
-          [(ngModel)]="model.fullName"
+          [ngModel]="model.fullName"
+          (ngModelChange)="model.fullName = $event"
           #fullName="ngModel"
           [ngClass]="{ 'is-invalid': cartForm.submitted && fullName.invalid }"
           required
@@ -53,7 +57,8 @@
           type="text"
           name="address"
           class="form-control"
-          [(ngModel)]="model.address"
+          [ngModel]="model.address"
+          (ngModelChange)="model.address = $event"
           #address="ngModel"
           [ngClass]="{ 'is-invalid': cartForm.submitted && address.invalid }"
           required
@@ -76,7 +81,8 @@
           type="text"
           name="creditCardNumber"
           class="form-control"
-          [(ngModel)]="model.creditCardNumber"
+          [ngModel]="model.creditCardNumber"
+          (ngModelChange)="model.creditCardNumber = $event"
           #creditCardNumber="ngModel"
           [ngClass]="{
             'is-invalid': cartForm.submitted && creditCardNumber.invalid

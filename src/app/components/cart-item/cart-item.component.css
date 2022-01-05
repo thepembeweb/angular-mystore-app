@@ -16,3 +16,22 @@ img {
   align-items: left;
   margin-left: 80px;
 }
+
+.button {
+  background-color: #f44336;
+  color: white;
+  border: 2px solid #f44336;
+  padding: 3px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}

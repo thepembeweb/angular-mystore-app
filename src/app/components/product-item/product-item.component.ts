@@ -19,8 +19,12 @@ export class ProductItemComponent implements OnInit {
   }
 
   public handleAddToCartClick(product: IProduct): void {
-    alert('Cart has been updated!');
-    this.addToCartClick.emit({ ...product, quantity: this.counter });
+    if (this.counter > 0) {
+      alert('Cart has been updated!');
+      this.addToCartClick.emit({ ...product, quantity: this.counter });
+    } else {
+      alert('Please add at least 1 product.');
+    }
   }
 
   public increment(): void {

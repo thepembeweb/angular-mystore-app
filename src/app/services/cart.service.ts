@@ -60,6 +60,14 @@ export class CartService {
     return this.cart;
   }
 
+  removeCartProduct(product: IProduct) {
+    this.cart.products = this.cart.products.filter(
+      (currentProduct) => currentProduct.id !== product.id
+    );
+
+    return this.cart;
+  }
+
   updateCartDetails(details: ICartDetails) {
     this.cart.details = details;
     return this.cart;

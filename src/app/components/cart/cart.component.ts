@@ -3,6 +3,7 @@ import { ICart } from 'src/app/models/cart.model';
 import { ICartDetails } from 'src/app/models/cart-details.model';
 import { CartService } from '../../services/cart.service';
 import { Router } from '@angular/router';
+import { IProduct } from 'src/app/models/product.model';
 
 @Component({
   selector: 'app-cart',
@@ -44,5 +45,10 @@ export class CartComponent implements OnInit {
     this.router.navigate(['/confirmation'], {
       queryParamsHandling: 'preserve',
     });
+  }
+
+  onRemoveFromCart(product: IProduct): void {
+    this.cartService.removeCartProduct(product);
+    this.getData();
   }
 }
